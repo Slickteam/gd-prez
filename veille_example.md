@@ -15,11 +15,11 @@
 
 
 
-## Méthodes
+## M&eacute;thodes
 
 
 
-## Sécurité
+## S&eacute;curit&eacute;
 
 
 
