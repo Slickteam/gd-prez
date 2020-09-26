@@ -6,7 +6,7 @@ pages:
     - npm ci
   script:
     - mkdir public/test
-    - npm run build -- public/test --theme solarized
+    - npm run build -- content/test.md public/test
   artifacts:
     paths:
       - public
