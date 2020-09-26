@@ -1,0 +1,12 @@
+image: node:12
+
+pages:
+  stage: deploy
+  before_script:
+    - npm ci
+  script:
+    - mkdir public/test
+    - npm run build -- public/test --theme solarized
+  artifacts:
+    paths:
+      - public
