@@ -1,12 +1,15 @@
 image: node:12
 
+variables:
+  FILENAME: "test"
+
 pages:
   stage: deploy
   before_script:
     - npm ci
   script:
-    - mkdir public/test
-    - npm run build -- content/test.md public/test
+    - mkdir public/$FILENAME
+    - npm run build
   artifacts:
     paths:
       - public
