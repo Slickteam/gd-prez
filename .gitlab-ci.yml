@@ -1,15 +1,11 @@
 image: node:12
 
-variables:
-  FILENAME: "test"
-
 pages:
   stage: deploy
   before_script:
     - npm ci
   script:
-    - mkdir public/$FILENAME
-    - npm run build
+    - ./general_all_prez.sh
   artifacts:
     paths:
       - public
