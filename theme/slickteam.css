@@ -13,7 +13,7 @@
 body {
   background-color: #fff;
   counter-reset: section;
-  background-image: url(/img/slickteam_logo.png);
+  background-image: url(../img/slickteam_logo.png);
   background-repeat: no-repeat;
   background-size: 128px 128px;
   background-position: left 24px bottom 24px;
