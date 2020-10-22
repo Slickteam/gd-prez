@@ -1,5 +1,7 @@
 # Kubernetes Easy
 
+
+
 ### Constat
 
 * Cluster kubernetes
@@ -10,6 +12,8 @@
 
 [Exemple](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/CI)
 
+
+
 ### Objectifs 
 
 * Simplifier des déploiements sur un cluster kubernetes
@@ -18,7 +22,8 @@
 * Inspiration de docker-compose
 
 
-## Ce qu’il peut gérer
+
+### Ce qu’il peut gérer
 
 * Deployements
   * pods
