@@ -38,6 +38,8 @@
   * de type local-path
 * Différents environnements
 
+
+
 ## Exemple: Le nouveau site slickteam
 
 ```yaml
@@ -56,6 +58,8 @@ imagePullSecrets: [name: "registrypullsecret"]
 
 ```
 
+
+
 ## Techno
 
 * Helm
@@ -72,6 +76,8 @@ helm repo add slickteam "https://repo.slickteam.fr/repository/helm/" --username 
 helm repo update
 ```
 
+
+
 ## Utilisation
 
 1. Écrire un fichier de déploiment 
@@ -82,6 +88,8 @@ helm repo update
 helm upgrade -i  <nom_application> slickteam/kubernetes-easy-template -f fichier_deploiment.yaml
 
 ```
+
+
 
 ## Dans gitlab
 
@@ -103,9 +111,12 @@ deploy to cluster:
 
 ```
 
+
+
 ## Flow
 
 ![easy kubernetes flow](../public/img/kubernetes_easy_flow.png "easy kubernetes flow")
+
 
 
 ## Resources
@@ -114,4 +125,6 @@ deploy to cluster:
 * [Exemple site vitrine](https://code.slickteam.fr/slicksi/vitrine/site-web-slickteam/newsite-nuxt/-/blob/develop/kubernetes/deploy.yaml)
 * [Exemple Slickdir](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/easy)
 
-## Remarques / questions
+
+
+### Remarques / questions
