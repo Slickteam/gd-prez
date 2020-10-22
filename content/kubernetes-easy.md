@@ -100,7 +100,7 @@ deploy to cluster:
 
 ## Flow
 
-![easy kubernetes flow](../public/images/kuberenets_easy_flow.png "easy kubernetes flow")
+![easy kubernetes flow](../public/img/kubernetes_easy_flow.png "easy kubernetes flow")
 
 
 ## Resources
