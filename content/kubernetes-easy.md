@@ -2,19 +2,17 @@
 
 
 
-### Constat
+## Constat 
+* Pour déployer sur le cluster Kubernetes
+  * Configurations complexe ( beaucupd de fichier. longs ):/ 
+  * trop complexe pour des projets simples
+  * Une configuration particulière par environnement :/
 
-* Cluster kubernetes
-* Exemples de déploiements avec gitlab-ci
-* Configurations complexe :/
-* trop complexe pour des projets simples
-* Une configuration particulière par environnement :/
-
-[Exemple](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/CI)
+[Exemple](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/)
 
 
 
-### Objectifs 
+## Objectifs 
 
 * Simplifier des déploiements sur un cluster kubernetes
 * Pour les applications simples
@@ -23,7 +21,7 @@
 
 
 
-### Ce qu’il peut gérer
+## Ce qu’il peut gérer
 
 * Deployements
   * pods
@@ -64,6 +62,9 @@ imagePullSecrets: [name: "registrypullsecret"]
 
 * Helm
 * Chart helm
+* Fichier de déploiement = Fichier Values d'un chart Helm
+
+
 
 ## Pré-requis (en local)
 
@@ -122,9 +123,9 @@ deploy to cluster:
 ## Resources
 
 * [Repository gitlab](https://code.slickteam.fr/geeking-days/kubernetes-easy)
-* [Exemple site vitrine](https://code.slickteam.fr/slicksi/vitrine/site-web-slickteam/newsite-nuxt/-/blob/develop/kubernetes/deploy.yaml)
-* [Exemple Slickdir](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/easy)
+* [Exemple: site vitrine](https://code.slickteam.fr/slicksi/vitrine/site-web-slickteam/newsite-nuxt/-/blob/develop/kubernetes/deploy.yaml)
+* [Exemple: Slickdir](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/easy)
 
 
 
-### Remarques / questions
+## Remarques / questions
