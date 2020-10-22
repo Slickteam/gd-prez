@@ -1,6 +1,6 @@
 # Kubernetes Easy
 
-## Constat
+### Constat
 
 * Cluster kubernetes
 * Exemples de déploiements avec gitlab-ci
@@ -8,9 +8,9 @@
 * trop complexe pour des projets simples
 * Une configuration particulière par environnement :/
 
-[Exemple] (https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/CI)
+[Exemple](https://code.slickteam.fr/geeking-days/SlicKDir/-/tree/master/kubernetes/CI)
 
-## Objectifs 
+### Objectifs 
 
 * Simplifier des déploiements sur un cluster kubernetes
 * Pour les applications simples
