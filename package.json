@@ -4,7 +4,7 @@
   "description": "Présentations des GD",
   "main": "index.js",
   "scripts": {
-    "serve": "reveal-md $1 --theme theme/slickteam.css --separator \"^\n\n\n\"",
+    "serve": "reveal-md $1 --theme theme/slickteam.css --separator \"^\\n\\n\\n\"",
     "build": "reveal-md content/$FILENAME.md --static public/$FILENAME --theme theme/slickteam.css --separator \"^\n\n\n\""
   },
   "repository": {
