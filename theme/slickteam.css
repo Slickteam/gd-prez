@@ -47,7 +47,7 @@ body > a {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 2.5rem 0;
   color: #444;
-  font-family: "Roboto Slab", serif;
+  font-family: "Helvetica";
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
