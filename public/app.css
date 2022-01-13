@@ -9,17 +9,19 @@ html, body {
   background-image: url(img/slickteam_logo.png);
   background-repeat: no-repeat;
   background-size: 128px 128px;
-  background-position: right 24px bottom 24px;
+  background-position: right 24px bottom 30px;
 }
 .topnav {
   width: 100%;
   height: 1.6em;
   padding-top: 0.3em;
-  padding-left: 1em;
   background: #EA6607;
   color: white;
   font-size: 2em;
   font-weight: bold;
+}
+.topnav span {
+  padding-left: 1em;
 }
 main {
   display: block;
@@ -55,10 +57,11 @@ li a:hover {
   background: #f6f6f6;
 }
 footer {
-  position: relative;
+  position: absolute;
   height: 30px;
   width: 100%;
   background-color: #EA6607;
+  bottom:0;
 }
 p.copyright {
   position: absolute;
