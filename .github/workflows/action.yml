@@ -1,11 +1,23 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: self-hosted
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+            node-version: '18.x'
+      - name: Install the site dependencies
+        run: npm install
+      - name: Build the site static assets
+        run: npm run build
+      - name: Build the site static assets
+        run: ls -lan
