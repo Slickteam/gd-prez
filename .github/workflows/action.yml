@@ -5,38 +5,38 @@ on:
     branches:
     - main
 
+permissions:
+  pages: write      # to deploy to Pages
+  id-token: write   # to verify the deployment originates from an appropriate source
+
 jobs:
-  build:
-    runs-on: self-hosted
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      # - name: Setup Node
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: '18.4'
-      # - name: Install the site dependencies
-      #   run: npm ci
-      # - name: Build the site static assets
-      #   run: ./general_all_prez.sh
-      - name: Show public folder
-        run: ls -lan public
-      - name: Upload public folder
-        uses: actions/upload-artifact@v3
-        with:
-          name: github-pages
-          path: public
+  # build:
+  #   runs-on: self-hosted
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v1
+  #     # - name: Setup Node
+  #     #   uses: actions/setup-node@v1
+  #     #   with:
+  #     #     node-version: '18.4'
+  #     # - name: Install the site dependencies
+  #     #   run: npm ci
+  #     # - name: Build the site static assets
+  #     #   run: ./general_all_prez.sh
+  #     - name: Show public folder
+  #       run: ls -lan public
+  #     - name: Upload public folder
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: github-pages
+  #         path: public
   deploy:
     # Add a dependency to the build job
-    needs: build
+    # needs: build
 
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
 
     # Deploy to the github-pages environment
     environment:
@@ -44,8 +44,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     # Specify runner + deployment step
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'public'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
