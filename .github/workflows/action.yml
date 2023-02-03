@@ -10,44 +10,22 @@ permissions:
   id-token: write   # to verify the deployment originates from an appropriate source
 
 jobs:
-  # build:
-  #   runs-on: self-hosted
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v1
-  #     # - name: Setup Node
-  #     #   uses: actions/setup-node@v1
-  #     #   with:
-  #     #     node-version: '18.4'
-  #     # - name: Install the site dependencies
-  #     #   run: npm ci
-  #     # - name: Build the site static assets
-  #     #   run: ./general_all_prez.sh
-  #     - name: Show public folder
-  #       run: ls -lan public
-  #     - name: Upload public folder
-  #       uses: actions/upload-artifact@v3
-  #       with:
-  #         name: github-pages
-  #         path: public
-  deploy:
-    # Add a dependency to the build job
-    # needs: build
-
-
-    # Deploy to the github-pages environment
+  build_n_deploy:
+    runs-on: self-hosted
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    # Specify runner + deployment step
-    runs-on: self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.4'
+      - name: Install the site dependencies
+        run: npm ci
+      - name: Build the site static assets
+        run: ./general_all_prez.sh
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
