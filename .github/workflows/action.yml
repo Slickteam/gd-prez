@@ -1,5 +1,4 @@
 name: GitHub Actions Demo
-description: Test Slickteam group runner on github
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
