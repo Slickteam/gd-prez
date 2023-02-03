@@ -2,4 +2,4 @@
 
 Présentations des GD
 
-https://slickteam.gitlab.io/geeking-days/gd-prez/
+https://slickteam.github.io/gd-prez/
