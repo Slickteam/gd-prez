@@ -17,8 +17,8 @@ jobs:
           node-version: '18.4'
       - name: Install the site dependencies
         run: npm ci
-      - name: Build the site static assets
-        run: ./general_all_prez.sh
+      # - name: Build the site static assets
+      #   run: ./general_all_prez.sh
       - name: Upload public folder
         uses: actions/upload-artifact@v3
         with:
