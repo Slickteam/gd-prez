@@ -11,14 +11,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18.4'
-      - name: Install the site dependencies
-        run: npm ci
+      # - name: Setup Node
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '18.4'
+      # - name: Install the site dependencies
+      #   run: npm ci
       # - name: Build the site static assets
       #   run: ./general_all_prez.sh
+      - name: Show public folder
+        run: ls -lan public
       - name: Upload public folder
         uses: actions/upload-artifact@v3
         with:
