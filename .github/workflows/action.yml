@@ -18,6 +18,6 @@ jobs:
       - name: Install the site dependencies
         run: npm install
       - name: Build the site static assets
-        run: npm run build
+        run: ./general_all_prez.sh
       - name: Build the site static assets
         run: ls -lan
